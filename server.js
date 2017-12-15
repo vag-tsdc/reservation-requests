@@ -15,8 +15,8 @@ app.use(bodyParser.json());
 
 // Star Wars Characters (DATA)
 // =============================================================
-var reservations = require("./tableData.js")
-var waitingList = require("./waitinglistData.js")
+var reservations = require("./data/tabelData.js")
+var waitingList = require("./data/waitinglistData.js")
 
 // Routes
 // =============================================================
@@ -35,37 +35,41 @@ app.get("/reserve", function(req, res) {
   });
 
 
-// Search for Specific Character (or all characters) - provides JSON
-app.get("/api/:tables?", function(req, res) {
-  var reservation = req.params.characters;
+// // Search for Specific Character (or all characters) - provides JSON
+// app.get("/api/:tables?", function(req, res) {
+//   var reservation = req.params.characters;
 
-  if (chosen) {
-    console.log(chosen);
+//   if (chosen) {
+//     console.log(chosen);
 
-    for (var i = 0; i < characters.length; i++) {
-      if (chosen === characters[i].routeName) {
-        return res.json(characters[i]);
-      }
-    }
-    return res.json(false);
-  }
-  return res.json(characters);
-});
+//     for (var i = 0; i < characters.length; i++) {
+//       if (chosen === characters[i].routeName) {
+//         return res.json(characters[i]);
+//       }
+//     }
+//     return res.json(false);
+//   }
+//   return res.json(characters);
+// });
 
-// Create New Characters - takes in JSON input
+// Create New Reservation - takes in JSON input
 app.post("/api/new", function(req, res) {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body-parser middleware
-  var newcharacter = req.body;
-  newcharacter.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
+  var newreservation = req.body;
+  newreservation.routeName = newreservation.name.replace(/\s+/g, "").toLowerCase();
 
-  console.log(newcharacter);
+  console.log(newreservation);
 
-  characters.push(newcharacter);
+  reservations.push(newreservation);
 
-  res.json(newcharacter);
+  res.json(newreservation);
 });
 
+function pullReservations() {
+  console.log(reservations)
+}
+pullReservations();
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {

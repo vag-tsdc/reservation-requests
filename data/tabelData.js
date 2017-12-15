@@ -1,3 +1,3 @@
-var tableData = [];
+var tabelData = ["yo"];
 
-module.exports = tableData;
+module.exports = tabelData;
