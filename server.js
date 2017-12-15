@@ -35,7 +35,7 @@ app.get("/reserve", function(req, res) {
   });
 
 
-// // Show waitlist JSON objects as they are submitted. (or all characters) - provides JSON
+// // Search for Specific Character (or all characters) - provides JSON
 // app.get("/api/:tables?", function(req, res) {
 //   var reservation = req.params.characters;
 
