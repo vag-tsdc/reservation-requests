@@ -18,8 +18,8 @@
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="#" class="brand-logo">
-                <img src="../assets/images/rat-logo.png" height="50px">
-                ratatouille</a>
+                <img src="../assets/images/rat-logo.png" height="50px"> ratatouille
+            </a>
             <ul class="right hide-on-med-and-down">
                 <li>
                     <a href="#">NAV</a>
@@ -46,10 +46,19 @@
                 <br>
                 <h1 class="header center teal-text text-lighten-2">ratatouille</h1>
                 <div class="row center">
+
+                    <!-- Make a Reseration text -->
+
+
+
+
+
                     <h5 class="header col s12 light">Reserve A Table</h5>
                 </div>
                 <div class="row center">
+                    <!-- View Tabel Button -->
                     <a href="tables.html" id="view tabels" class="btn-large waves-effect waves-light teal lighten-1">View Tabels</a>
+                    <!-- Home Button -->
                     <a href="home.html" id="home" class="btn-large waves-effect waves-light teal lighten-1">Home</a>
                 </div>
                 <br>
@@ -62,12 +71,7 @@
         </div>
     </div>
 
-    <!-- Make a Reseration text -->
 
-    <!-- View Tabel Button -->
-
-
-    <!-- Home Button -->
 
 
     <!-- Reservation Form -->
@@ -77,11 +81,54 @@
     email
     unique ID
  -->
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">Full Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">Full Name Guest</label>
+                </div>
 
-    <!-- submit button -->
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">phone</i>
+                    <input id="icon_telephone" type="tel" class="validate">
+                    <label for="icon_telephone">Telephone</label>
+                </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="email" type="email" class="validate">
+                        <label for="email" data-error="wrong" data-success="right">Email</label>
+                    </div>
+                </div>
+            </div>
 
-      <!-- footer links -->
-    <!-- control panel
+            <div class="row">
+                <div class="col s2"></div>
+                <div class="input-field col s8">
+                        <i class="material-icons prefix">message</i>
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Special Request</label>
+                    </div>
+                </div>
+                <div class="col s2"></div>
+            </div>
+        </form>
+    </div>
+</body>
+
+
+<!-- submit button -->
+
+<!-- footer links -->
+<!-- control panel
    api table link
    api waitlist 
     -->
