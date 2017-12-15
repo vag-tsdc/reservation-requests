@@ -61,13 +61,13 @@ app.post("/api/new", function(req, res) {
 
   console.log(newreservation);
 
-  tableData.push(newreservation);
+  reservations.push(newreservation);
 
   res.json(newreservation);
 });
 
 function pullReservation(){
-  console.log(tableData)
+  console.log(reservations)
 }
 pullReservation();
 // Starts the server to begin listening
