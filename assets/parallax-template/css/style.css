@@ -29,6 +29,16 @@ p {
     width: 100%;
   }
 
+#restaurantimg {
+  width: 100%;
+}
+
+#download-button {
+  margin-top: 15%;
+  background-color: white;
+  color: black;
+}
+
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
